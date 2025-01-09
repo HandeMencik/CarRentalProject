@@ -15,5 +15,6 @@ namespace Business.Abstract
         IResult Update(Price price);
         IDataResult<List<Price>> GetAll();
         IDataResult<Price> GetById(int id);
+        IDataResult<List<Price>> GetPricesWithCars();
     }
 }

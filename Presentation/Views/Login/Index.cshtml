@@ -1,0 +1,101 @@
+﻿@model LoginViewModel
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="~/login-form-09/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="~/login-form-09/css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/login-form-09/css/bootstrap.min.css">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="~/login-form-09/css/style.css">
+
+    <title>CarBook Login</title>
+</head>
+<body>
+
+
+
+    <div class="content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- <div class="col-md-6 order-md-2">
+                  <img src="images/undraw_file_sync_ot38.svg" alt="Image" class="img-fluid">
+                </div> -->
+                <div class="col-md-6 contents">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12">
+                            <div class="form-block">
+                                <div class="mb-4">
+                                    <h3><strong>CarBook</strong>Giriş</h3>
+                                   
+                                </div>
+                                <form asp-action="Index" method="post">
+                                    <div class="form-group first">
+                                        <label asp-for="UserName">Username</label>
+                                        <input asp-for="UserName" class="form-control" />
+                                        <span asp-validation-for="UserName" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group last mb-4">
+                                        <label asp-for="Password">Password</label>
+                                        <input asp-for="Password" type="password" class="form-control" />
+                                        <span asp-validation-for="Password" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="d-flex mb-5 align-items-center">
+                                        <label class="control control--checkbox mb-0">
+                                            <span class="caption">Beni Hatırla</span>
+                                            <input type="checkbox" checked="checked" />
+                                            <div class="control__indicator"></div>
+                                        </label>
+                                        <span class="ml-auto"><a href="#" class="forgot-pass">Şifremi Unuttum</a></span>
+                                    </div>
+
+                                    <input type="submit" value="Giriş Yap" class="btn btn-pill text-white btn-block btn-primary">
+
+                                    <div style="text-align: center; margin-top: 10px;">
+                                        <span class="form-control" style="display: inline-block; text-align: center;">
+                                            <a href="/Register/Index/" style="text-decoration: none;">Ya da Kaydol</a>
+                                        </span>
+                                    </div>
+
+                                    <div class="social-login text-center">
+                                        <a href="https://www.facebook.com/?locale=tr_TR" class="facebook">
+                                            <span class="icon-facebook mr-3"></span>
+                                        </a>
+                                        <a href="https://x.com/?lang=tr" class="twitter">
+                                            <span class="icon-twitter mr-3"></span>
+                                        </a>
+                                        <a href="https://www.google.com.tr/?hl=tr" class="google">
+                                            <span class="icon-google mr-3"></span>
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="~/login-form-09/js/jquery-3.3.1.min.js"></script>
+    <script src="~/login-form-09/js/popper.min.js"></script>
+    <script src="~/login-form-09/js/bootstrap.min.js"></script>
+    <script src="~/login-form-09/js/main.js"></script>
+</body>
+</html>

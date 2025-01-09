@@ -1,0 +1,41 @@
+﻿@model List<Entity.Concerete.Car>
+@{
+    ViewData["Title"] = "Index2";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Model</th>
+        <th>Category</th>
+        <th>Marka</th>
+        <th>Vites Türü</th>
+        <th>Yıl </th>
+        <th>Araba Durumu</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Detaylar</th>
+        <th>Sitede Gör</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.CarId</td>
+            <td>@item.Model</td>
+            <td>@item.Category.CategoryName</td>
+            <td>@item.Brand.BrandName</td>
+            <td>@item.GearType</td>
+            <td>@item.Year</td>
+            <td>@item.CarStatus.CarStatusName</td>
+            <td><a href="/Car/Delete/@item.CarId" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Car/Update/@item.CarId" class="btn btn-success">Güncelle</a></td>
+            <td><a href="#" class="btn btn-secondary">Detaylar</a></td>
+            <td><a href="#" class="btn btn-primary">Sitede Gör</a></td>
+
+        </tr>
+    }
+</table>
+
+<a href="/Car/Add/" class="btn btn-info">Yeni Araba Girişi</a>

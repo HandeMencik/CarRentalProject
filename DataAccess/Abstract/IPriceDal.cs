@@ -10,5 +10,6 @@ namespace DataAccess.Abstract
 {
     public interface IPriceDal:IEntityRepository<Price>
     {
+        List<Price> GetPricesWithCars();
     }
 }

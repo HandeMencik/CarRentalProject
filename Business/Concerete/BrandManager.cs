@@ -38,7 +38,7 @@ namespace Business.Concerete
 
         public IDataResult<Brand> GetById(int id)
         {
-          return new SuccessDataResult<Brand>(_brandDal.Get(b=>b.BrandId==id),"Mesaj");
+          return new SuccessDataResult<Brand>(_brandDal.Get(b=>b.BrandId==id));
         }
 
         public IResult Update(Brand brand)

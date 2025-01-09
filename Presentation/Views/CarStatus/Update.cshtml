@@ -1,0 +1,15 @@
+﻿@model Entity.Concerete.CarStatus
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h3>Durum Güncelleme Sayfası</h3>
+<form method="post" asp-controller="CarStatus" asp-action="Update">
+    <input type="hidden" asp-for="CarStatusId" />
+    <label>Araç Durumu</label>
+    <input type="text" asp-for="CarStatusName" class="form-control" style="border:1px solid #3407" />
+    <br />
+    <button class="btn btn-success">Durumu Güncelle</button>
+
+</form>

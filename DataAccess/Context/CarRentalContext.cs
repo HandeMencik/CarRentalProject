@@ -1,5 +1,6 @@
 ﻿
 using Entity.Concerete;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Context
 {
-    public class CarRentalContext : DbContext
+    public class CarRentalContext : IdentityDbContext<AppUser,AppRole,int>
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -21,6 +22,8 @@ namespace DataAccess.Context
         public DbSet<Category> Categories { get; set; }
         public DbSet<Location> Locations { get; set; }
         public DbSet<Price> Prices { get; set; }
+        public DbSet<Service> Services { get; set; }
+        public DbSet<HowItWork> HowItWorks { get; set; }
    
     }
 }
